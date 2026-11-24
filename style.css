@@ -1,0 +1,151 @@
+
+/* D-ilm Website Design */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f8f7;
+  color: #25352f;
+  line-height: 1.6;
+}
+
+/* Header */
+
+header {
+  background: #064e3b;
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+header h2 {
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #a7f3d0;
+}
+
+/* Hero section */
+
+.hero {
+  min-height: 430px;
+  background: linear-gradient(135deg, #064e3b, #0f766e);
+  color: white;
+  text-align: center;
+  padding: 110px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.hero h2 {
+  font-size: 25px;
+  color: #a7f3d0;
+}
+
+.hero p {
+  margin: 18px auto 28px;
+  max-width: 550px;
+}
+
+.btn {
+  display: inline-block;
+  background: #facc15;
+  color: #173d31;
+  padding: 13px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* General sections */
+
+section:not(.hero) {
+  padding: 65px 8%;
+  text-align: center;
+}
+
+section h2 {
+  color: #065f46;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+section p {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Student portal */
+
+#login {
+  background: #e5f3ed;
+}
+
+/* Footer */
+
+footer {
+  background: #063d30;
+  color: white;
+  text-align: center;
+  padding: 22px;
+}
+
+/* Mobile responsive design */
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 85px 18px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero h2 {
+    font-size: 21px;
+  }
+
+  section:not(.hero) {
+    padding: 45px 20px;
+  }
+}
