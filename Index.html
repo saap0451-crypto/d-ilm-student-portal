@@ -37,10 +37,44 @@
     <p>Explore educational resources and learning programmes.</p>
   </section>
 
-  <section id="login">
-    <h2>Student Portal</h2>
-    <p>Student registration and login will be available here.</p>
-  </section>
+  
+<section id="login">
+  <h2>D-ilm Student Portal</h2>
+  <p>Access your learning account</p>
+
+  <div class="login-box">
+    <h3>Student Registration</h3>
+
+    <input type="email" id="regEmail"
+      placeholder="Enter your email">
+
+    <input type="password" id="regPassword"
+      placeholder="Create password">
+
+    <button onclick="registerStudent(
+      document.getElementById('regEmail').value,
+      document.getElementById('regPassword').value
+    )">Register</button>
+
+    <hr>
+
+    <h3>Student Login</h3>
+
+    <input type="email" id="loginEmail"
+      placeholder="Enter your email">
+
+    <input type="password" id="loginPassword"
+      placeholder="Enter password">
+
+    <button onclick="loginStudent(
+      document.getElementById('loginEmail').value,
+      document.getElementById('loginPassword').value
+    )">Login</button>
+
+    <button onclick="logoutStudent()">Logout</button>
+  </div>
+</section>
+
 
   <footer>
     <p>© 2026 D-ilm. All Rights Reserved.</p>
