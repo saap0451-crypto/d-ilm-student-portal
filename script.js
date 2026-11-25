@@ -1,3 +1,4 @@
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 
 import {
@@ -24,39 +25,50 @@ const auth = getAuth(app);
 
 console.log("D-ilm Firebase connected!");
 
-// Register a student
+// Student Registration
 window.registerStudent = async (email, password) => {
   try {
     const result = await createUserWithEmailAndPassword(
       auth, email, password
     );
+
     alert("Welcome to D-ilm! Registration successful.");
+    window.location.href = "dashboard.html";
+
     return result.user;
+
   } catch (error) {
     alert(error.message);
     return null;
   }
 };
 
-// Login a student
+// Student Login
 window.loginStudent = async (email, password) => {
   try {
     const result = await signInWithEmailAndPassword(
       auth, email, password
     );
+
     alert("Login successful! Welcome to D-ilm.");
+    window.location.href = "dashboard.html";
+
     return result.user;
+
   } catch (error) {
     alert(error.message);
     return null;
   }
 };
 
-// Logout a student
+// Student Logout
 window.logoutStudent = async () => {
   try {
     await signOut(auth);
+
     alert("You have logged out.");
+    window.location.href = "index.html#login";
+
   } catch (error) {
     alert(error.message);
   }
