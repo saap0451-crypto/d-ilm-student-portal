@@ -32,9 +32,9 @@ window.registerStudent = async (email, password) => {
       auth, email, password
     );
 
-    alert("Welcome to D-ilm! Registration successful.");
-    window.location.href = "dashboard.html";
+    alert("Login successful! Welcome to D-ilm.");
 
+window.location.href = "dashboard.html";
     return result.user;
 
   } catch (error) {
